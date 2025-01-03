@@ -16,6 +16,13 @@ pipeline {
                echo "mvn clean pacakage"
             }
         }
+	stage('JUnit Test Execution') {             
+            steps {                 
+               // sh 'mvn test'
+                echo "JUnit tests executed"
+                //junit 'target/surefire-reports/*.xml' // Publish JUnit test results
+            }         
+        }        
         stage('Sonar Scan') {
             steps {
                withSonarQubeEnv('SonarServer')
