@@ -6,7 +6,7 @@ pipeline {
             steps {
 
 
-               git branch: 'prod', credentialsId: 'GIT_Credentials', url: 'https://github.com/vilas639/eos-catalog-ap.git'
+               git branch: 'prod', credentialsId: 'GIT_Credentials', url: 'https://github.com/vilas639/eos-catalog-api.git'
                echo "clone repo"
             }
         }
